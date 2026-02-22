@@ -1,0 +1,151 @@
+.students-root {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: var(--text);
+}
+.students-header h1 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.6rem;
+}
+.students-header .muted {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.student-card {
+  background: linear-gradient(180deg, var(--surface) 0%, #ffffff 100%);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: left;
+  box-shadow: 0 8px 30px rgba(15,23,42,0.08);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6rem;
+  align-items: center;
+}
+.student-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+.student-card-link:hover .student-card {
+  transform: translateY(-4px);
+  transition: transform 180ms;
+}
+.detail-section h3 {
+  margin: 0 0 0.5rem 0;
+}
+/* Course rows for student details */
+.courses-list { display:flex; flex-direction:column; gap:6px }
+.course-row { display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid var(--card-border) }
+.course-row:last-child { border-bottom: none }
+.course-name { font-weight:600 }
+.course-teacher { color: var(--muted); font-size:0.95rem }
+.student-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.student-avatar {
+  display: none;
+}
+.student-email {
+  font-size: 0.9rem;
+  color: #475569;
+    color: var(--muted);
+}
+.student-courses {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+.course-list { display:flex; gap:8px; flex-wrap:wrap; margin-top:0.5rem }
+.course-pill { display:inline-block; padding:6px 10px; border-radius:999px; background:#f0f6ff; border:1px solid #dbeafe; color:#1e3a8a; font-size:0.85rem }
+.no-courses {
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+.error { color: #b91c1c }
+
+.btn {
+  display: inline-block;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+}
+.btn.primary { color: white; background: var(--brand); border-color: var(--brand); }
+.btn.ghost { color: var(--brand); background: transparent; }
+.btn.danger { color: white; background: var(--danger); border-color: var(--danger); }
+.student-actions { margin-top: 0.6rem; display:flex; gap:0.5rem; align-items:center; justify-self: end }
+
+.icon-btn { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:8px; border:1px solid transparent; background:transparent; cursor:pointer; font-size:16px }
+.icon-btn.edit { background: linear-gradient(180deg,#e6f0ff,#dbeafe); border-color:#bfdbfe }
+.icon-btn.delete { background: linear-gradient(180deg,#ffecec,#ffdede); border-color:#ffb4b4 }
+.icon-btn:focus { outline:2px solid rgba(59,130,246,0.25) }
+
+/* layout updated to single column; previous grid-column rules removed */
+
+/* modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2,6,23,0.45);
+  z-index: 60;
+}
+.modal {
+  width: 520px;
+  max-width: calc(100% - 32px);
+  background: var(--surface);
+  border: 1px solid var(--card-border);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(2,6,23,0.12);
+}
+.modal.simple-modal { background: white; border-radius: 8px; padding: 1rem 1.25rem }
+.modal h2 { margin-top: 0; font-size: 1.1rem }
+.modal form label { display:block; margin:0.5rem 0 }
+.modal form .form-row input, .modal form select, .modal form input, .modal form .form-row textarea { width:100%; padding:0.6rem 0.65rem; border-radius:8px; border:1px solid #e6eef6; color: var(--text); background: #fff; box-sizing: border-box; max-width:100% }
+.modal form select { appearance: none }
+.modal form input:focus, .modal form select:focus { outline:2px solid rgba(59,130,246,0.12); border-color:#93c5fd }
+
+/* Ensure modal and form controls use border-box so padding doesn't cause overflow */
+.modal, .modal * { box-sizing: border-box }
+
+.form-row { display:block; margin-bottom:0.6rem }
+
+.text-btn { background: transparent; border: none; padding: 0; margin: 0; cursor: pointer; font-size: 0.95rem; color: var(--brand); text-decoration: none }
+.text-btn.delete { color: var(--danger) }
+.text-btn:hover { text-decoration: underline }
+
+.modal { padding: 1.1rem }
+.modal .form-row { margin-bottom: 0.6rem }
+.chip-row { gap:10px }
+.chip { padding:6px 10px }
+.modal-actions { display:flex; justify-content:flex-end; gap:0.6rem; margin-top:1rem }
+.chip-row { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px }
+.chip { display:inline-flex; align-items:center; gap:8px; padding:6px 8px; border-radius:999px; background:#f3f4f6; border:1px solid #e6eef6 }
+.chip-remove { background:transparent; border:0; cursor:pointer; font-size:14px }
+.no-courses { color: var(--muted) }
+.course-item { display:flex; gap:8px; align-items:center }
+
+/* course details: students list */
+.students-list { display:flex; flex-direction:column; gap:8px }
+.student-row { display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid var(--card-border) }
+.student-row:last-child { border-bottom: none }
+.student-row-left { display:flex; flex-direction:column }
+.student-row-right { color: var(--muted); font-size:0.95rem }
+.student-row .student-name { font-weight:600 }
+.student-row .student-email { color: var(--muted); font-size:0.9rem }
+

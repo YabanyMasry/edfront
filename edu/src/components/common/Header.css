@@ -1,0 +1,5 @@
+.app-header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#fff;border-bottom:1px solid #eee}
+.brand-link{text-decoration:none;font-weight:700;color:#222}
+.main-nav{display:flex;gap:12px}
+.nav-item{color:#666;text-decoration:none;padding:6px 8px;border-radius:4px}
+.nav-item.active{background:#f0f0f0;color:#111}

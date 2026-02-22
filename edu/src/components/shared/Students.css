@@ -1,0 +1,21 @@
+.students-root{padding:20px}
+.students-header{margin-bottom:12px}
+.muted{color:#666}
+.students-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.student-card{background:#fff;border:1px solid #eee;padding:12px;border-radius:6px;display:flex;align-items:center;justify-content:space-between}
+.student-main{flex:1;margin-left:12px}
+.student-name{font-weight:600}
+.student-email{font-size:0.9em;color:#666}
+.student-actions{display:flex;gap:8px}
+.btn{padding:6px 10px;border-radius:4px;border:1px solid #ccc;background:#fff}
+.btn.primary{background:#2b7cff;color:#fff;border-color:transparent}
+.btn.ghost{background:transparent}
+.btn.danger{background:#ff6b6b;color:#fff;border-color:transparent}
+.modal-overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.35)}
+.modal{background:#fff;padding:16px;border-radius:8px;min-width:320px}
+.chip-row{display:flex;gap:8px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;background:#f0f0f0;padding:4px 8px;border-radius:16px}
+.chip-remove{margin-left:8px;background:transparent;border:0}
+.students-list{display:flex;flex-direction:column;gap:8px}
+.student-row{display:flex;justify-content:space-between;align-items:center}
+.no-courses{color:#999}
